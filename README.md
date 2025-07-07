@@ -1,4 +1,3 @@
-# MinimalLibrary
 # 📚 Minimal Library Management System
 
 A minimal full-stack Library Management System built with **React + Vite**, **Redux Toolkit Query**, **Express.js**, **MongoDB**, and deployed to **Vercel**.
