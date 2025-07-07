@@ -37,17 +37,17 @@ A minimal full-stack Library Management System built with **React + Vite**, **Re
 
 ## 📖 Available API Routes
 
-**Base URL (Backend):** `https://minimal-library-backend.vercel.app/api`
+**Base URL (Backend):** `https://minimal-library-backend.vercel.app`
 
 ### 📚 Book Routes
 
 | Method | Endpoint         | Description                 |
 |--------|-----------------|-----------------------------|
-| GET    | `/books`        | Get all books               |
-| GET    | `/books/:id`    | Get details of a book       |
-| POST   | `/books`        | Add new book                |
-| PATCH  | `/books/:id`    | Update book details         |
-| DELETE | `/books/:id`    | Delete a book               |
+| GET    | `api/books`        | Get all books               |
+| GET    | `api/books/:id`    | Get details of a book       |
+| POST   | `api/books`        | Add new book                |
+| PATCH  | `api/books/:id`    | Update book details         |
+| DELETE | `api/books/:id`    | Delete a book               |
 
 ---
 
@@ -55,8 +55,8 @@ A minimal full-stack Library Management System built with **React + Vite**, **Re
 
 | Method | Endpoint              | Description               |
 |--------|----------------------|---------------------------|
-| POST   | `/borrow/:bookId`     | Borrow book (reduce copies) |
-| GET    | `/borrow/summary`     | Summary of borrowed books |
+| POST   | `api/borrow/:bookId`     | Borrow book (reduce copies) |
+| GET    | `api/borrow/summary`     | Summary of borrowed books |
 
 ---
 
@@ -89,20 +89,28 @@ npm run dev
 ```
 
 ###  Deployment
-Both Frontend and Backend deployed to Vercel
+- Both Frontend and Backend deployed to Vercel
+- Backend is serverless, no need to manage servers
+- CORS configured for secure frontend-backend communication
 
-Backend is serverless, no need to manage servers
 
-CORS configured for secure frontend-backend communication
+## 🏆 Features
+- ✅ Book Management (CRUD)
+- ✅ Borrow Functionality with Due Dates
+- ✅ Borrow Summary Report
+- ✅ Fully Responsive UI
+- ✅ Toast Notifications for Actions
+- ✅ Deployed and Production-ready
 
-### Features
-✅ Book CRUD Operations
-✅ Borrow Book with Quantity & Due Date
-✅ Borrow Summary Report
-✅ Responsive UI with Tailwind CSS
-✅ Toast Notifications for Actions
-✅ MongoDB for persistent storage
-✅ Deployed and Production-ready
+## ⚠️ Important Notes
+Vercel serverless functions sometimes require a short warm-up period. On first access, you may encounter errors or the backend may not respond initially.
+
+If this happens:
+- ✅ Open the backend link directly: [https://minimal-library-backend.vercel.app/](https://minimal-library-backend.vercel.app/)
+- ✅ Open the frontend link: [https://minimal-library-frontend.vercel.app/](https://minimal-library-frontend.vercel.app/)
+- ✅ Try again in Incognito Mode for a clean session
+
+After a few refreshes or backend wake-up, the data will load properly.
 
 ### Author
 Hamja Mohtadee Ebne Mamun
